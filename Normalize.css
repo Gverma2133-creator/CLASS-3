@@ -1,0 +1,164 @@
+/* Normalize CSS */
+@import url('normalize.css');
+
+/* HTML selector */
+html {
+    font: 20px 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Structural class styling */
+.structural {
+    padding: 10px;
+    border: 2px solid #000;
+    margin: 1rem;
+}
+
+/* Background colors for structural elements */
+header.structural {
+    background-color: hsl(200, 100%, 70%);
+}
+
+section.structural {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+main.structural {
+    flex: 2 1 70%;
+}
+
+aside.structural {
+    flex: 1 1 30%;
+}
+
+footer.structural {
+    background-color: hsl(50, 100%, 70%);
+}
+
+/* Font colors for paragraphs using RGB method */
+main p#paragraph1 {
+    color: rgb(255, 0, 0);
+}
+
+main p#paragraph2 {
+    color: rgb(0, 255, 0);
+}
+
+main p#paragraph3 {
+    color: rgb(0, 0, 255);
+}
+
+/* Link hover effect using 3-digit hex */
+aside ul a:hover {
+    color: #F00;
+}
+
+/* Nav menu styling */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    border: 2px solid indigo;
+    color: indigo;
+    background-color: cornsilk;
+    text-decoration: none;
+    padding: 1em;
+}
+
+nav a:hover {
+    color: cornsilk;
+    background-color: indigo;
+}
+
+/* Form styling */
+form {
+    border: 5px dashed #000;
+    padding: 5px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea,
+form input[type="submit"] {
+    width: 50%;
+    display: block;
+    height: 2em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    height: 2em;
+    width: 2em;
+}
+
+fieldset {
+    border: none;
+}
+
+/* H1 font size */
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Gallery main ID styling */
+main#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+main#gallery figure {
+    border: 1px solid #000;
+    padding: 1em;
+}
+
+main#gallery img {
+    width: 80%;
+    height: 80%;
+}
+
+/* Responsive CSS */
+@media (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+
+    main#gallery {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        flex-direction: column;
+    }
+
+    main.structural {
+        flex: 1 1 auto;
+    }
+
+    aside.structural {
+        flex: 1 1 auto;
+    }
+}
